@@ -11,7 +11,7 @@ export default class RoundContainer extends LightningElement {
   set removeJogadores(value) {
     this.removeJogador = value;
     if (value) {
-      this.round = { ...this.round, Jogadores2__r: [] };
+      this.round = { ...this.round, Jogadores__r: [] };
     }
   }
   toggleList = false;

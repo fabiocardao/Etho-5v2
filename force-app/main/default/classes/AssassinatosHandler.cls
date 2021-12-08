@@ -62,7 +62,7 @@ public with sharing class AssassinatosHandler {
     @TestVisible
     private static Assassinato__c registraAssassinato(Jogador__c assassino, Jogador__c assassinado) {
         return new Assassinato__c(
-            Assassinado__c = assassinado.Id,
+            Assassinados__c = assassinado.Id,
             Assassino__c = assassino.Id,
             DataHora__c =  System.now()
         );

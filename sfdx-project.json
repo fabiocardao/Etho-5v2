@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "etho-5",
+  "name": "etho-5v2",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "52.0"

@@ -36,7 +36,7 @@ export default class RoundsContainer extends LightningElement {
 
   removeJogadores(event) {
     this.roundsAux = this.roundsAux.map((value) => {
-      return { ...value, Jogadores2__r: [] };
+      return { ...value, Jogadores__r: [] };
     });
   }
 }

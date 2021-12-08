@@ -45,7 +45,7 @@ export default class JogarContainer extends LightningElement {
     event.preventDefault();
     //this.aux.Name = "Ble";
     //this.aux = { ...this.aux, Name: "Ble" };
-    tentarMatar({ jogadores: this.roundSelecionadoCerto.Jogadores2__r })
+    tentarMatar({ jogadores: this.roundSelecionadoCerto.Jogadores__r })
       .then((result) => {
         if (result) {
           const assassinato = result.Assassinato;
@@ -73,7 +73,7 @@ export default class JogarContainer extends LightningElement {
   }
 
   getJogadorById(id) {
-    return this.roundSelecionadoCerto.Jogadores2__r.find(
+    return this.roundSelecionadoCerto.Jogadores__r.find(
       (jogador) => jogador.Id == id
     );
   }
@@ -90,7 +90,7 @@ export default class JogarContainer extends LightningElement {
 
   updateRound(idAssassinado) {
     let round = this.roundSelecionadoCerto;
-    let jogadoresRound = [...round.Jogadores2__r];
+    let jogadoresRound = [...round.Jogadores__r];
     jogadoresRound = [
       ...jogadoresRound.map((jogador) => {
         if (jogador.Id == idAssassinado) {
@@ -100,7 +100,7 @@ export default class JogarContainer extends LightningElement {
       })
     ];
 
-    round = { ...round, Jogadores2__r: jogadoresRound };
+    round = { ...round, Jogadores__r: jogadoresRound };
     this.rounds = [
       ...this.rounds.map((roundAux) => {
         if (roundAux.Id == round.Id) {

@@ -12,7 +12,7 @@ public without sharing class AssassinatosTriggerHandler {
     static void mataJogadorAssassinado(Assassinato__c record, List<Jogador__c> jogadoresMortos) {
         jogadoresMortos.add(
             new Jogador__c(
-                Id = record.Assassinado__c,
+                Id = record.Assassinados__c,
                 Morreu__c = true
             )
         );
